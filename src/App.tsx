@@ -81,7 +81,6 @@ const App = () => {
             .split('\n')
             .map((row) => row.split(''));
 
-        // Code assumes a rectangular floor plan. If not, too bad!
         const newFloorPlan: FloorPlan = [];
 
         asciiFloorPlan.forEach((row, i) => {
