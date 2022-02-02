@@ -64,3 +64,10 @@ Have fun!
 Demo Link: https://colored-rooms.vercel.app/
 
 ![](screenshot.png)
+
+### Failure Cases
+The app will fail under certain circumstances. This is one case that I've found:
+
+![](fail-case.png)
+
+I was not able to debug and fix this problem during the 1-hour time limit I set for myself.
