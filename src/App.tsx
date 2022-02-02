@@ -76,6 +76,8 @@ const App = () => {
     };
 
     useEffect(() => {
+        let colorIndex = 0;
+
         const asciiFloorPlan = ascii
             .trim()
             .split('\n')
@@ -113,8 +115,12 @@ const App = () => {
                     color = newFloorPlan[i][j + 1];
                 } else {
                     // Otherwise, must be a new room. Generate a new random color.
-                    const randomColorIndex = Math.floor(Math.random() * colors.length);
-                    color = colors[randomColorIndex];
+                    color = colors[colorIndex];
+                    colorIndex++;
+
+                    if (colorIndex === colors.length) {
+                        colorIndex = 0;
+                    }
                 }
             }
 
